@@ -12,13 +12,7 @@ func main() {
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "The Page is under construction",
-		})
-	})
-
-	r.GET("/login", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "login-required",
+			"message": "Page is under construction",
 		})
 	})
 	r.Run() // listen and serve on 0.0.0.0:8080
