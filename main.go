@@ -22,5 +22,11 @@ func main() {
 		})
 	})
 
+	r.GET("/contact", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "contact Page is under construction",
+		})
+	})
+
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
