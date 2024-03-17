@@ -3,30 +3,17 @@ package main
 import (
 	"fmt"
 
+	"github.com/9500073161/skill-map-app/apis"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	fmt.Println("Developing Skill-MAP")
 
-	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "The page is under construction",
-		})
-	})
+	router := gin.Default()
 
-	r.GET("/login", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Login Page is under construction",
-		})
-	})
+	apis.RegisterUserApis(router)
 
-	r.GET("/contact", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "contact Page is under construction",
-		})
-	})
+	router.Run()
 
-	r.Run() // listen and serve on 0.0.0.0:8080
 }
